@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs') %>
+    <form action="/skills/<%=skill._id%>?_method=PUT" method="POST" class="skill-form">
+        <div class="form-group">
+            <label class="form-label">Skill:</label>
+            <input type="text" name="title" value="<%=skill.title%>" class="form-input" required>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Level:</label>
+            <select name="level" class="form-input" required>
+                <option value="Beginner" <%= skill.level === "Beginner" ? "selected" : "" %>>Beginner</option>
+                <option value="Intermediate" <%= skill.level === "Intermediate" ? "selected" : "" %>>Intermediate</option>
+                <option value="Professional" <%= skill.level === "Professional" ? "selected" : "" %>>Professional</option>
+                <option value="Master" <%= skill.level === "Master" ? "selected" : "" %>>Master</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Started:</label>
+            <input type="date" name="experience" value="<%= skill.experience.toISOString().substring(0, 10) %>" class="form-input" required>
+        </div>
+        <button type="submit" class="submit-button">Update Skill</button>
+    </form>
+<%- include('../partials/footer.ejs') %>

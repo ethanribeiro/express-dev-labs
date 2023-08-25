@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs') %>
+  <ul class="skill-list">
+    <% skills.forEach(function(skill) { %>
+      <li class="skill-item">
+        <span class="skill-title"><%= skill.title %></span>
+        <span class="skill-level">Level: <%= skill.level %></span>
+        <span class="skill-experience">Started: <%= skill.experience.toLocaleString().slice(0, 9) %></span>
+        <a class="more-info" href="/skills/<%= skill._id %>">More Info</a>
+        <form method="POST" action="/skills/<%= skill._id %>?_method=DELETE" class="delete-form">
+            <button class="delete-button" type="submit">Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+<%- include('../partials/footer.ejs') %>

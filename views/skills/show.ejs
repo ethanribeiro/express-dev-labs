@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+    <table class="show-table">
+        <tbody>
+            <tr>
+                <td>Skill: <%= skill.title %></td>
+                <td>
+                    <a href="/skills/<%= skill._id %>/edit" class="edit-link">Edit Skill</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Level: <%= skill.level %></td>
+            </tr>
+            <tr>
+                <td>Started: <%= skill.experience.toLocaleString().slice(0, 9) %></td>
+                <td>
+                    <form method="POST" action="/skills/<%= skill._id %>?_method=DELETE">
+                        <button class="delete-button" type="submit">Delete Skill</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+<%- include('../partials/footer') %>

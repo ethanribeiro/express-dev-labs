@@ -1,8 +1,136 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.header {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.nav {
+  margin-top: 10px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.main {
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-item {
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skill-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.skill-level, .skill-experience {
+  margin-bottom: 5px;
+}
+
+.more-info, .delete-button {
+  background-color: #3498db;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.more-info:hover {
+  background-color: #2980b9;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+
+.show-table {
+  margin: 50px auto;
+  border-collapse: collapse;
+}
+
+.show-table td {
+  padding: 10px 20px;
+  border: 1px solid #e1e1e1;
+  text-align: left;
+}
+
+.edit-link {
+  color: white;
+  text-decoration: none;
+  background-color: #3498db;
+  padding: 4px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-link:hover {
+  text-decoration: none;
+  background-color: #2980b9;
 }
